@@ -7,63 +7,58 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="./style.css">
   <title>Challenge 4 Quiz</title>
 </head>
 
 <body>
+    
     <!--Header that contains the high score link and the timer-->
     <header class="container-fluid bg-white mb-5 p-3">
         <div class="d-flex align-items-center">
             <h4><a href="#">View High Scores</a></h4>
-            <h4 class="ml-auto">Time: 00</h4>
+            <h4 class="counter ml-auto">Time:<span id="time">00</span></h4>
 
         </div>
     </header>
+
+    
     <!--These will be the questions-->
-    <section id="Question1" class="container my-4">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-xl-7">
-            <h3>How Long does it take to drive from Salt Lake City, UT to Mesquite, NV?</h3>
+    <div id="questionEl" class="hide px-5 my-4">
+          <div class="row justify-content-center">
+              <div id="questions" class="col-12 col-md-8 col-xl-7">
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- <div id="buttons" class="row justify-content-center">
-    <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-      </div> -->
+     </div>
+     
+    
+    
 
       <!--These will be the answers-->
-     <div id="answers" class="container row justify-content-center p-3">
-         <ul class="list-unstyled">
-             <li id="answer1" class="mt-1"><button type="button" class="btn btn-primary">Answer 1</button></li>
-             <li id="answer2" class="mt-3 "><button type="button" class="btn btn-primary">Answer 2</button></li>
-             <li id="answer3" class="mt-3"><button type="button" class="btn btn-primary">Answer 3</button></li>
-             <li id="answer4" class="mt-3"><button type="button" class="btn btn-primary">Answer 4</button></li>
-         </ul>
-     </div>
+       
+    
+     
+     
 
 
+        <!--Footers that will diaplay depending on the answer-->
+       <footer id="correct" class="hide jumbotron">
+          <h1 class="display-4">Correct!</h1>
+          <p class="lead">That is the correct Answer!</p>
+          <hr class="my-4">
+       </footer>
 
-     <footer id="correct" class="jumbotron">
-        <h1 class="display-4">Correct!</h1>
-        <p class="lead">That is the correct Answer!</p>
-        <hr class="my-4">
-     </footer>
+       <footer id="wrong" class="hide jumbotron">
+          <h1 class="display-4">Wrong!</h1>
+          <p class="lead">Sorry, That is the wrong answer.</p>
+          <hr class="my-4">
+       </footer>
+    </div>
 
-     <footer id="wrong" class="jumbotron">
-        <h1 class="display-4">Wrong!</h1>
-        <p class="lead">Sorry, That is the wrong answer.</p>
-        <hr class="my-4">
-     </footer>
-
-
-
-
-
-
+     <!--Start Quiz Button-->
+    <div class="d-flex justify-content-xl-center">
+      <button id="start-btn" type="button" class="btn btn-primary ">START</button>
+    </div>
 
 
 
@@ -74,6 +69,11 @@
 
 
 
+
+
+
+
+<script src="./script.js"></script>
 </body>
 </html>
 
