@@ -5,62 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./mona-whisper copy 2.gif" type="image/x-icon">
   <title>Challenge 4 Quiz</title>
 </head>
 
 <body>
     
-    <!--Header that contains the high score link and the timer-->
+<!--Header that contains the high score link and the timer-->
+
     <header class="container-fluid bg-white mb-5 p-3">
         <div class="d-flex align-items-center">
-            <h4><a href="#">View High Scores</a></h4>
+          <button type="button" id="viewHighScoreBtn" class="btn btn-link btn-lg">View HighScore</button>
             <h4 class="counter ml-auto">Time:<span id="time">00</span></h4>
+            
 
         </div>
     </header>
 
     
-    <!--These will be the questions-->
-    <div id="questionEl" class="hide px-5 my-4">
+    <main>
+
+<!--Start Quiz Button-->
+       <div class="text-center">
+        
+            <button id="start-btn" type="button" class="btn btn-primary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size:  3rem;">START</button>  
+
+      </div>
+
+<!-- Test is over prompt -->
+      <div id="testOver" class="hide text-center">
+
+        <h2> Time Is Up!</h2>
+        <h2>HighScore:<span id="high-Score"></span></h2>
+        Enter Initials: <input type="text" id="initials">
+        <button id="save" type="button" class="btn btn-primary">Save Score</button>
+
+
+        <button id="playAgain-btn" type="button" class="btn btn-primary">Play Again</button>
+
+      </div>
+
+    
+<!--These will be the questions-->
+    <div id="questionEl" class="hide  px-5 my-4">
           <div class="row justify-content-center">
-              <div id="questions" class="col-12 col-md-8 col-xl-7">
-              </div>
-            </div>
-     </div>
-     
-    
-    
+              <h2 id="questions" class="fs-1 col-12 col-md-8 col-xl-7"></h2>
+          </div>
+    </div>
 
-      <!--These will be the answers-->
-       
-    
-     
-     
+<!-- This is the HighScore Promt -->
+<div id="highScoresPrompt" class="hide text-center">
+  <h2>HIGH SCORES!</h2>
+  <ul id="output"></ul>
+
+  <button id="playAgain-btn" type="button" class="btn btn-primary">Play Again</button>
+</div>
 
 
-        <!--Footers that will diaplay depending on the answer-->
+  </main>
+
+
+<!--Footers that will diaplay depending on the answer-->
        <footer id="correct" class="hide jumbotron">
-          <h1 class="display-4">Correct!</h1>
+          <h1 class="display-5">Correct!</h1>
           <p class="lead">That is the correct Answer!</p>
           <hr class="my-4">
        </footer>
 
        <footer id="wrong" class="hide jumbotron">
-          <h1 class="display-4">Wrong!</h1>
+          <h1 class="display-5">Wrong!</h1>
           <p class="lead">Sorry, That is the wrong answer.</p>
           <hr class="my-4">
        </footer>
     </div>
 
-     <!--Start Quiz Button-->
-    <div class="d-flex justify-content-xl-center">
-      <button id="start-btn" type="button" class="btn btn-primary ">START</button>
-    </div>
+    
 
 
+
+
+   
+  
 
 
 
